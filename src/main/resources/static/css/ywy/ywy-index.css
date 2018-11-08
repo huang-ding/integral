@@ -1,0 +1,328 @@
+/*** 旧代码兼容用, 不要删除, 新的主题色在 theme-principle.ejs 中 ****/
+.theme-navbar-color {
+  background-color : #1B74C5 !important;
+  color            : #FFFFFF !important;
+}
+
+.theme-navbar-color-integral {
+  background-color : #1B74C5 !important;
+  color            : #fff !important;
+}
+
+.theme-navbar-color .navbar_left *,
+.theme-navbar-color .navbar_right *,
+.theme-navbar-color .navbar_right .link i.icon-large,
+.theme-navbar-color .navbar_right .link i,
+.theme-navbar-color .navbar_left_color i,
+.theme-navbar-color .navbar_right_color i,
+.theme-navbar-color .navbar_left_color *,
+.theme-navbar-color .navbar_right_color * {
+  color : #FFFFFF !important;
+}
+
+.theme-navbar-before-color:first-child:before {
+  background-color : #1B74C5 !important;
+}
+
+/**tabbar 相关颜色**/
+.theme-toolbar-color {
+  color            : #B1B1B1 !important;
+  background-color : #FFFFFF !important;
+}
+
+.theme-toolbar-color .tab-link.theme .theme-icon {
+  color : #1B74C5;
+}
+
+.theme-toolbar-color .tab-link.theme .tabbar-label {
+  color : #1B74C5;
+}
+
+.theme-color {
+  color : #F4932F !important;
+}
+
+.theme-navbar-color .navbar_right .theme-color {
+  color : #1B74C5 !important;
+}
+
+.theme-border {
+  border : 1px solid #1B74C5 !important;
+}
+
+.theme-border-color {
+  border-color : #1B74C5 !important;
+}
+
+.theme-button-color {
+  color : #37A7DC;
+}
+
+.theme-normal-border {
+  border : 1px solid #37A7DC !important;
+}
+
+.theme-normal-color {
+  color : #37A7DC !important;
+}
+
+.theme-toolbar-color .tab-link.active {
+  color : #1B74C5;
+}
+
+.swiper-slide.act {
+  color : #2798FF;
+
+}
+
+.swiper-slide.act span {
+  border-bottom : 2px solid #2798FF;
+  display       : inline-block;
+  height        : 100%;
+}
+
+.theme-toolbar-bg-color {
+  background-color : #F4932F;
+}
+
+/*底部工具栏高亮*/
+.theme-toolbar-color .tab-link.theme {
+  color : #1B74C5;
+}
+
+.theme-highlight {
+  color : #F4932F !important;
+}
+
+.theme-highlight svg {
+  fill : #F4932F !important;
+}
+
+/**可操作文字颜色**/
+.theme-action {
+  color : #1B74C5 !important;
+}
+
+/**获取验证码颜色**/
+.theme-code-bg {
+  background-color : #f2304e !important;
+}
+
+.theme-code-color {
+  color : #f2304e !important;
+}
+
+.toolbar-inner > .tab-link.active .theme-icon {
+  background-color : #1B74C5;
+}
+
+.content-block.secondary .buttons-row .tab-link.active {
+  color        : #D83029;
+  border-color : #D83029;
+}
+
+.button {
+  background-color : #37A7DC;
+  border-color     : #37A7DC;
+}
+
+.button.button-fill {
+  background-color : #37A7DC !important;
+  border-color     : #37A7DC !important;
+}
+
+.button.button-big {
+  background-color : #37A7DC;
+  border-color     : #37A7DC;
+}
+
+.button.button-bar {
+  background-color : #1B74C5;
+  border-color     : #1B74C5;
+}
+
+.button.active-state {
+  background-color : #37A7DC;
+  border-color     : #37A7DC;
+}
+
+.sort-item > .item-content .item-inner .col-50.active {
+  color : #D83029;
+}
+
+/*选项卡滑动*/
+.buttons-row .button.active {
+  color         : #1B74C5 !important;
+  border-bottom : 2px solid #1B74C5 !important;
+}
+
+.buttons-row .button.active-state {
+  color         : #D83029 !important;
+  border-bottom : 2px solid #D83029 !important;
+}
+
+/*商品评论*/
+.content-block.secondary .buttons-row .button.active {
+  color         : #2798FF !important;
+  border-bottom : 2px solid #2798FF !important;
+}
+
+/*商品分类*/
+
+.sort-item > .item-content .item-inner .col-50.active {
+  color : #1B74C5;
+}
+
+.content-block.secondary .buttons-row .button.active-state {
+  color         : #1B74C5;
+  border-bottom : 2px solid #1B74C5;
+}
+
+/*书签*/
+.theme-bookmark {
+  border-top    : 22px solid #1B74C5;
+  border-bottom : 23px solid #1B74C5;
+}
+
+/*角标*/
+.theme-smaller-subscript {
+  border-top  : 15px solid #1B74C5;
+  border-left : 15px solid #1B74C5;
+}
+
+.theme-small-subscript {
+  border-top  : 19px solid #1B74C5;
+  border-left : 19px solid #1B74C5;
+}
+
+.theme-slightly-larger-subscript {
+  border-top  : 24px solid #1B74C5;
+  border-left : 24px solid #1B74C5;
+}
+
+.theme-big-subscript {
+  border-top  : 30px solid #1B74C5;
+  border-left : 30px solid #1B74C5;
+}
+
+/*switch*/
+.label-switch input[type=checkbox]:checked + .checkbox {
+  background : #1B74C5;
+}
+
+/*checbox and radio*/
+
+label.label-checkbox input[type=checkbox]:checked + .item-media i.icon-form-checkbox, label.label-checkbox input[type=radio]:checked + .item-media i.icon-form-checkbox {
+  background : #1B74C5;
+}
+
+/*论坛已关注按钮背景色*/
+.theme-follow-bg-color {
+  background-color : #FFFFFF !important;
+}
+
+/*带金券二级导航色*/
+.secondaryNavigationBarFC-theme-action {
+  color : #2798FF !important;
+}
+
+/*渐变*/
+.gradient {
+  height     : 140px;
+  background : -moz-linear-gradient(top, #1B74C5 0%, #ffffff 100%);
+  background : -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1B74C5), color-stop(100%, #ffffff));
+  background : -webkit-linear-gradient(top, #1B74C5 0%, #ffffff 100%);
+  background : -o-linear-gradient(top, #1B74C5 0%, #ffffff 100%);
+  background : -ms-linear-gradient(top, #1B74C5 0%, #ffffff 100%);
+  background : linear-gradient(to bottom, #1B74C5 0%, #ffffff 100%);
+}
+
+.buttons-row .tab-link.active, .weui-navbar .weui-bar__item_on, .operable-text {
+  color        : #2798FF !important;
+  border-color : #2798FF !important;
+}
+
+/**/
+.hiddenText {
+  width         : 180px;
+  text-align    : right;
+  white-space   : nowrap;
+  overflow      : hidden;
+  text-overflow : ellipsis;
+}
+
+.hiddenOtherText {
+  width         : 200px;
+  white-space   : nowrap;
+  overflow      : hidden;
+  text-overflow : ellipsis;
+}
+
+/*论坛*/
+.theme-top-color {
+  color : #F4932F !important;
+}
+
+.theme-top-border {
+  border : 1px solid #F4932F !important;
+}
+
+.theme-button-color {
+  border : 1px solid #F4932F !important;
+  color  : #F4932F !important;
+}
+
+.white {
+  color : #fff;
+}
+
+.filter-ul .act {
+  color : #F4932F !important;
+}
+
+.click-active {
+  color : #F4932F !important;
+}
+
+.click-link {
+  border-bottom : 2px solid #F4932F !important;
+}
+
+.am-tabs-default-bar-tab-active {
+  color : #1B74C5 !important;
+}
+
+.am-tabs-default-bar-underline {
+  border : 1px #1B74C5 solid !important;
+}
+
+.am-button-ghost {
+  border : 1px solid #F4932F !important;
+  color  : #F4932F !important;
+}
+
+.am-button-ghost::before {
+  border : 1px solid #F4932F !important;
+}
+
+@media (-webkit-min-device-pixel-ratio : 2), (min-resolution : 2dppx) {
+  .am-button-ghost {
+    border : none !important;
+  }
+}
+
+.am-tag-active {
+  border : 1px solid #F4932F !important;
+  color  : #F4932F !important;
+}
+
+.am-tag-active::before {
+  border : 1px solid #F4932F !important;
+}
+
+@media (-webkit-min-device-pixel-ratio : 2), (min-resolution : 2dppx) {
+  .am-tag-active {
+    border : none !important;
+  }
+}
+

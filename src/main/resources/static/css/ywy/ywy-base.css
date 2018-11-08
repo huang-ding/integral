@@ -1,0 +1,154 @@
+/*** 可操作文字 ****/
+/***文字***/
+.h5-operate-color {
+  color : #D83029;
+}
+
+/***背景***/
+.h5-operate-bg {
+  background-color : #D83029;
+}
+
+/***边框颜色***/
+.h5-operate-bc {
+  border-color : #D83029;
+}
+
+/*****获取验证码*****/
+/***文字***/
+.h5-validate-color {
+  color : #f2304e;
+}
+
+/***背景***/
+.h5-validate-bg {
+  background-color : #f2304e;
+}
+
+/***边框颜色***/
+.h5-validate-bc {
+  border-color : #f2304e;
+}
+
+/*****高亮文本色*****/
+/***文字***/
+.h5-highlight-color {
+  color : #F4932F !important;
+}
+
+/***SVG***/
+.h5-highlight-svg {
+  fill : #F4932F !important;
+}
+
+/***背景***/
+.h5-highlight-bg {
+  background-color : #F4932F;
+}
+
+/***边框颜色***/
+.h5-highlight-bc {
+  border-color : #F4932F !important;
+}
+
+/*****导航栏背景****/
+/***文字***/
+.h5-navbar_background-color {
+  color : #1B74C5;
+}
+
+/***背景***/
+.h5-navbar_background-bg {
+  background : #1B74C5;
+}
+
+/***边框颜色***/
+.h5-navbar_background-bc {
+  border-color : #1B74C5;
+}
+
+/*****导航栏文字****/
+/***文字***/
+.h5-navbar_fontcolor-color {
+  color : #FFFFFF;
+}
+
+/***背景***/
+.h5-navbar_fontcolor-bg {
+  background-color : #FFFFFF;
+}
+
+/***边框颜色***/
+.h5-navbar_fontcolor-bc {
+  border-color : #FFFFFF;
+}
+
+/*****按钮背景色****/
+/*有些订单按钮样式太重*/
+/***文字***/
+.h5-button_background-color {
+  color : #37A7DC !important;
+}
+
+/***背景***/
+.h5-button_background-bg {
+  background-color : #37A7DC !important;
+}
+
+/***边框颜色***/
+.h5-button_background-bc {
+  border-color : #37A7DC !important;
+}
+
+/*****tabbar栏背景色****/
+/***文字***/
+.h5-tabbar_background-color {
+  color : #FFFFFF !important;
+}
+
+/***背景***/
+.h5-tabbar_background-bg {
+  background-color : #FFFFFF;
+}
+
+/***边框颜色***/
+.h5-tabbar_background-bc {
+  border-color : #FFFFFF;
+}
+
+/*****tabbar文字激活颜色****/
+/***文字***/
+.h5-tabbar_fontcolor_active-color {
+  color : #1B74C5;
+}
+
+/***背景***/
+.h5-tabbar_fontcolor_active-bg {
+  background-color : #1B74C5;
+}
+
+/***边框颜色***/
+.h5-tabbar_fontcolor_active-bc {
+  border-color : #1B74C5;
+}
+
+/*****tabbar正常文字颜色****/
+/***文字***/
+.h5-tabbar_fontcolor-color {
+  color : #B1B1B1;
+}
+
+/***背景***/
+.h5-tabbar_fontcolor-bg {
+  background-color : #B1B1B1;
+}
+
+/***背景白色****/
+.bg-white {
+  background-color : #fff;
+}
+
+/***边框颜色***/
+.h5-tabbar_fontcolor-bc {
+  border-color : #B1B1B1;
+}

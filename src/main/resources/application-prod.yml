@@ -1,0 +1,13 @@
+#redis
+spring:
+  redis:
+    host: redis
+    password: ywy123456
+    port: 6379
+    database: 0
+
+logging:
+  level:
+    com.yiwenyin.integral: INFO
+    root: INFO
+    org.springframework.web: INFO

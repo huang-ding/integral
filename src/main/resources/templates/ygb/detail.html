@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html
+    lang="en" xmlns:th="http://www.thymeleaf.org"
+    class="pixel-ratio-3 retina ios ios-11 ios-11-0 ios-gt-10 ios-gt-9 ios-gt-8 ios-gt-7 ios-gt-6 watch-active-state">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="format-detection" content="telephone=yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="wap-font-scale" content="no">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="expires" content="0">
+  <meta http-equiv="cache-control" content="no-cache,no-store">
+  <meta http-equiv="pragma" content="no-cache">
+
+  <link rel="shortcut icon" type="image/png"
+        href="https://csqncdn.maxleap.cn/NWJjMTVjZjIwMzUxY2IwMDA3YTY3ZmIx/qn-3e30b004-2330-4f81-8c2c-86ae2bca9126.png">
+  <link rel="apple-touch-icon-precomposed"
+        href="https://csqncdn.maxleap.cn/NWJjMTVjZjIwMzUxY2IwMDA3YTY3ZmIx/qn-3e30b004-2330-4f81-8c2c-86ae2bca9126.png">
+  <title>我的银股宝 | 一纹银</title>
+  <link rel="stylesheet" href="/css/ywy/base.min.css">
+
+  <link rel="stylesheet" href="/css/ywy/oldcss.bundle.css">
+
+  <link rel="stylesheet" href="/css/ywy/style.css" type="text/css"/>
+</head>
+<body>
+<div id="member-points-detail-page" class="page navbar-fixed page-on-center"
+     data-page="member-points-detail">
+
+  <div class="page-content pull-to-refresh-content" title="银股宝明细" style="padding-top: 0px;">
+    <div class="pull-to-refresh-layer">
+      <div class="preloader"></div>
+      <div class="pull-to-refresh-arrow"></div>
+    </div>
+
+    <div id="navbar" class="navbar">
+      <div class="navbar-left">
+        <a class="demo-button-back" href="javascript:void(0)"
+           onclick="javascript:history.go(-1);return false;">返回</a>
+      </div>
+      <div class="navbar-center">银股宝明细</div>
+    </div>
+    <br>
+    <br>
+    <ul class="balance-list">
+
+      <li class="balance-item" th:each="integral:${integralInfo.results}">
+        <div class="balance-title" th:text="${integral.typeRemark}"></div>
+        <div class="balance-time"><span th:text="${integral.createdAtFormat}"></span></div>
+        <span class="balance-value">
+          <span th:if="${integral.symbolType == 1}" class="add theme-highlight"
+                style="display: inline-block;" th:text="'+'+${integral.integral}">
+          </span>
+          <span th:if="${integral.symbolType == 0}" class="minus"
+                style="display: inline-block;color: #000;" th:text="'-'+${integral.integral}">
+          </span>
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>
