@@ -1,2 +1,1 @@
 编译打包镜像
-mvn clean package -Pprod -DskipTest docker:build
