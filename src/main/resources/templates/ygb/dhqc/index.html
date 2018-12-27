@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>jQuery姓名电话随机抽奖代码</title>
+  <title>浙江东汇控股</title>
   <link rel="stylesheet" href="/css/ywy/dhqc/style.css" type="text/css"/>
 </head>
 <body style="overflow-y:hidden">
@@ -12,15 +12,18 @@
 <div class="box">
   <div class="jz">
     <p><b>抽奖活动</b></p>
-    <span class="name">姓名</span><br/>
-    <span class="phone">电话</span><br/>
+    <span class="name" style="text-align: center">姓名</span><br/>
+    <span class="phone" style="text-align: center">电话</span><br/>
     <div class="start" id="btntxt">开始</div>
   </div>
-  <div class="zjmd" style="overflow-y:auto">
-    <p class="p1">中奖者名单</p>
-    <div class="list">
+  <div style="overflow-y:hidden">
+    <div class="zjmd" style="overflow-y:auto">
+      <p class="p1">中奖者名单</p>
+      <div class="list">
+      </div>
     </div>
   </div>
+
 </div>
 <script type="text/javascript" src="/js/jquery-1.8.0.js"></script>
 <!--<script type="text/javascript" src="/js/cj.js"></script>-->
@@ -87,17 +90,23 @@
         if (td == 1) {
           dark = "特等奖";
           reward = 1
-        }
-        if (td == 2 || td == 3) {
+          $('.list').prepend(
+              "<p style='color: red;font-size:1.3em'>" + dark + ' ' + users[num].name+ users[num].mobile + "</p>");
+        } else if (td == 2 || td == 3) {
           dark = "一等奖";
           reward = 2;
-        }
-        if (td > 3 && td < 7) {
+          $('.list').prepend(
+              "<p style='color: #f44f16;font-size:1.2em'>" + dark + ' ' + users[num].name + "  " + users[num].mobile + "</p>");
+        } else if (td > 3 && td < 7) {
           dark = "二等奖";
           reward = 3;
+          $('.list').prepend(
+              "<p style='color: orange;font-size:1.1em'>" + dark + ' ' + users[num].name + " " + users[num].mobile + "</p>");
+        } else {
+          $('.list').prepend(
+              "<p>" + dark + ' ' + users[num].name + " " + users[num].mobile + "</p>");
         }
-        $('.list').prepend(
-            "<p>" + dark + ' ' + users[num].name + " -- " + users[num].mobile + "</p>");
+
         saveLuck(users[num].openId,reward);
         users.splice(num, 1)
         td = td - 1;

@@ -35,7 +35,7 @@ public class DHControoler {
     private StringRedisTemplate redisTemplate;
 
     @RequestMapping("index")
-    public String index(ModelMap modelMap) {
+    public String index() {
         return "ygb/dhqc/index";
     }
 
@@ -47,7 +47,11 @@ public class DHControoler {
         Map<Object, Object> result = new HashMap<>();
         while (curosr.hasNext()) {
             Entry<Object, Object> next = curosr.next();
-            result.put(next.getKey(), next.getValue());
+            Object value = next.getValue();
+            DHUser dhUser = JSON.parseObject(value.toString(), DHUser.class);
+            String mobile = dhUser.getMobile();
+            dhUser.setMobile(mobile.replaceAll("(\\d{3})\\d{4}(\\d{4})", "$1****$2"));
+            result.put(next.getKey(), JSON.toJSONString(dhUser));
         }
         return JsonResult.DATA(result);
     }
