@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery姓名电话随机抽奖代码</title>
+  <link rel="stylesheet" href="/css/ywy/dhqc/style.css" type="text/css"/>
+</head>
+<body style="overflow-y:hidden">
+<div class="bg">
+  <img src="/img/1545880550.jpg">
+</div>
+<div class="box">
+  <div class="jz">
+    <p><b>抽奖活动</b></p>
+    <span class="name">姓名</span><br/>
+    <span class="phone">电话</span><br/>
+    <div class="start" id="btntxt">开始</div>
+  </div>
+  <div class="zjmd" style="overflow-y:auto">
+    <p class="p1">中奖者名单</p>
+    <div class="list">
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="/js/jquery-1.8.0.js"></script>
+<!--<script type="text/javascript" src="/js/cj.js"></script>-->
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+</div>
+</body>
+<script>
+  $(function () {
+    var users = getDrawUser();
+    var nametxt = $('.name');
+    var phonetxt = $('.phone');
+    var pcount = users.length - 1;//参加人数
+
+    var runing = true;
+    var td = 21;//内定中奖,从最小奖开始，共10个名额
+    var num = 0;
+    var t;
+
+    $('#btntxt').click(function () {
+      start();
+    })
+
+    //开始停止
+    function start() {
+      if (td <= 0) {
+        alert("抽奖结束");
+        return false;
+      }
+      if (runing) {
+        runing = false;
+        $('#btntxt').removeClass('start').addClass('stop');
+        $('#btntxt').html('停止');
+        startNum()
+      } else {
+        runing = true;
+        $('#btntxt').removeClass('stop').addClass('start');
+        $('#btntxt').html('开始');
+        stop();
+        zd();//内定中奖
+      }
+    }
+
+    //循环参加名单
+    function startNum() {
+      num = Math.floor(Math.random() * pcount);
+      nametxt.html(users[num].name);
+      phonetxt.html(users[num].mobile);
+      t = setTimeout(startNum, 0);
+    }
+
+    //停止跳动
+    function stop() {
+      pcount = users.length - 1;
+      clearInterval(t);
+      t = 0;
+    }
+
+    //从一等奖开始指定前3名
+    function zd() {
+      var reward = 4;
+      if (td > 0) {
+        var dark = '三等奖';
+        if (td == 1) {
+          dark = "特等奖";
+          reward = 1
+        }
+        if (td == 2 || td == 3) {
+          dark = "一等奖";
+          reward = 2;
+        }
+        if (td > 3 && td < 7) {
+          dark = "二等奖";
+          reward = 3;
+        }
+        $('.list').prepend(
+            "<p>" + dark + ' ' + users[num].name + " -- " + users[num].mobile + "</p>");
+        saveLuck(users[num].openId,reward);
+        users.splice(num, 1)
+        td = td - 1;
+      } else {
+        alert("抽奖结束");
+      }
+
+    }
+
+    function getDrawUser() {
+      var userArr = new Array();
+      $.ajaxSettings.async = false;
+      $.get("/dh/getUser", function (data) {
+        $.each(data.data, function (i, item) {
+          userArr.push($.parseJSON(item));
+        })
+      });
+      return userArr;
+    }
+
+    function saveLuck(openid,reward) {
+      $.get("/dh/saveLuck", {openId: openid, reward: reward}, function (data) {
+        $.each(data.data, function (i, item) {
+          console.log(item)
+        })
+      });
+    }
+
+  })
+</script>
+</html>

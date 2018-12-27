@@ -2,7 +2,6 @@
 spring:
   redis:
     host: redis
-    password: ywy123456
     port: 6379
     database: 0
 
