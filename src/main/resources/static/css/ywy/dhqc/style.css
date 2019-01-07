@@ -6,7 +6,7 @@
 .jz p{line-height:80px;text-align:center;font-size:50px;color:#ffffff;}
 .jz span{display: block;width:420px;height:80px;line-height:80px;margin:20px 0;text-align:left;font-size:60px;background: #ffffff;}
 .start,.stop{width:200px;height:80px;line-height:80px;text-align:center;font-size:64px;border-radius:10px;margin:auto;color:#ffffff;cursor: pointer;}
-.start{background: #24ADD7;}
+.start{background: rgb(222, 177, 4);}
 .stop{background: #FC6666;}
 
 .zjmd{float:left;width:333px;height: 500px;background: #666;margin-top:30px;margin-left:30px;background: #ffffff;overflow: hidden;}
